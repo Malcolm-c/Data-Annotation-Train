@@ -293,6 +293,7 @@ function write_meaning(data, word) {
 }
 
 function get_row(row_id){
+    console.log("prev:", prev_marked_concept);
     document.getElementById('radio' + row_id.substring(2)).checked = true;
     document.getElementById(row_id).style.backgroundColor = "#FFE49D";
     if (prev_marked_concept != ""){
@@ -388,6 +389,7 @@ function clear_content(){
     
     //marked_id = "";
     marked_concept = "";
+    prev_marked_concept = "";
 }
 
 tippy('#question', {
